@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Michroma&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'Michroma', sans-serif;
+  --font-body: 'Jost', sans-serif;
+  --color-bg: #f7f5e7;
+  --color-primary: #ffb6c1;
+  --color-accent: #ff7fa1;
+  --color-text: #181818;
+  --color-white: #fff;
+  --color-btn: #ff7fa1;
+  --color-btn-hover: #ffb6c1;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
