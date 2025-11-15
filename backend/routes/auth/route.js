@@ -1,18 +1,21 @@
-const express = require('express')
-const user_router = express.Router()
-const {signup} = require('../../controllers/auth.controller')
-const {login} = require('../../controllers/auth.controller')
-const verifyUser = require('../../middlewares/verifyUser')
+const express = require('express');
+const user_router = express.Router();
 
-user_router.post('/signup', signup)
-user_router.post('/login', login)
+const { signup, login } = require('../../controllers/auth.controller');
+const verifyUser = require('../../middlewares/verifyUser');
+
+// Signup
+user_router.post('/signup', signup);
+
+// Login
+user_router.post('/login', login);
+
+// Verify user
 user_router.get('/verify', verifyUser, (req, res) => {
-    const user = req.user
-    res.json({
-        user: user,
-        verified: true,
-        
-    })
-})
+    return res.json({
+        user: req.user,
+        verified: true
+    });
+});
 
-module.exports = user_router
+module.exports = user_router;
